@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/about.css" rel="stylesheet" type="text/css">
+<link href="css/product.css"rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+$(function(){
+	         /* var x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+			  $(window).resize(
+			  function(){
+		      x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+				  }
+			  )*/
+			  var x=0
+              var n=true
+             $(".menu > dl").hide()
+			 $(".menu").click(
+			 function(){
+				 if(n){
+					 $(".menu > dl").show()
+					 n=false
+					 }else{
+						  $(".menu > dl").hide()
+						  n=true
+						 }
+				 }
+			 )
+			 $(".reveal_img").mouseenter(
+			 function(){
+				 $(this).children().animate({width:290,
+				 height:260,marginLeft:-30,marginTop:-30},1000)
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(this).children().animate({width:230,
+				 height:200,marginLeft:0,marginTop:0},1000)
+				 }
+			 )
+			 
+			 $(".news_j").hide()
+			 $(".news").mouseenter(
+			 function(){
+				 x=$(this).index()
+				 $(".news_j").eq(x).slideDown()
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(".news_j").eq(x).slideUp()
+				 }
+			 )
+			 
+		$(".exchange_box li").click(
+		function(){
+			$(this).addClass("exchange_current")
+			$(this).siblings().removeClass("exchange_current")
+			}
+		)
+
+
+               
+})
+</script>
+<body>
+<!--顶部导航-->
+<div class="header_container">
+   <div class="top_container">
+     <div class="logo"><img src="image/logo.png" alt="logo"></div>
+     <div class="menu">
+          <span>菜单</span>
+          <dl>
+              <dd><a href="product.html">产品展示</a></dd>
+              <dd><a href="#">关于我们</a></dd>
+              <dd><a href="#">新闻资讯</a></dd>
+              <dd><a href="#">精彩生活</a></dd>
+              <dd><a href="#">联系我们</a></dd>
+          </dl>
+     </div>
+     <ul class="top_nav">
+         <li><a href="index.html">首页</a></li>
+         <li><a href="product.html">产品展示</a></li>
+         <li class="nav_current"><a href="about.html">关于我们</a></li>
+         <li><a href="news.html">新闻资讯</a></li>
+         <li><a href="#">精彩生活</a></li>
+         <li><a href="serve.html">联系我们</a></li>
+         <div class="clearfix"></div>
+     </ul>
+      <div class="clearfix"></div>
+   </div>
+</div>
+<!--banner-->
+<div class="banner_container">
+     <div class="banner_option">
+          <h1>关于我们<span> / about us</span><h1>
+          <h3><a href="#">联系我们<span> / contact us</span></a></h3>
+          <h3><a href="#">招募精英<span> / elite  envy</span></a></h3>
+     </div>
+     <div class="banner_about">
+           <img src="image/banner04.png" alt="04">
+     </div>
+</div>
+<!--关于我们-->
+<div class="about_container">
+     <div class="aboutleft">
+          <img src="image/banner05.png" alt="05">
+     </div>
+     <div class="aboutright">
+          <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          我常常在想 ，皇帝穿着所谓最美的新衣游街，却只有孩子敢指出真相。而现在的社会
+          有那么多的问题 ，却连敢大声指责的孩子都没有了 。事实上 ，没有不需要埋头苦干就能
+          功 没有只靠PPT就能得到的财富， 没有从天而降的高科技  。追求卓越 ，需要无数苦思冥
+          思冥想的深夜，需要连续工作72小时的执着，更需要敢于大声说出真相的勇气。真正美的
+          想的力，然而我们却鲜有能够打动世界的科技产品、文学及艺术作品，缺少文化价值观的
+          输出，只事物极具感染能对舶来文化趋之若鹜。</p>
+          <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          十年间，DJI站在了行业之巅，开启全球飞行影像新时代，展现出改造世界的无限可
+          能。我们的经历证明，一个初出茅庐的年轻人不去曲意逢迎、不去投机取巧，只要踏实做
+          事就一定能取得成功。我们相信，那些回归常识、尊重奋斗的人，终将洞见时代机遇，并
+          最终改变世界。</p>
+          <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          大道无疆创新无限。如果你志存高远、怀揣梦想，决心踏实做事&nbsp;、创造价值，却在扭
+          曲的现实中自我怀疑&nbsp;、彷徨无奈，那就加入DJI吧&nbsp;！在这里，与更多真知灼见者碰撞，与
+          更多志同道合者同行！
+          </p>
+     </div>
+     <div class="aboutbottom">
+          <h5>未来，无所不能！</h5>
+          <span>— Frank Wang</span>
+          <div class="clearfix"></div>
+     </div>
+     <div class="clearfix"></div>
+</div>
+
+<!--产品-->
+<div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/reveal01.png" alt="01">
+               </div>
+               <h5>ZENMUSE X5R无人机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal02.png" alt="02">
+              </div> 
+               <h5>大疆无人机悟 inspire</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal03.png" alt="03">
+              </div> 
+               <h5>AMNKLUOK5FVH0009</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal04.png" alt="04">
+              </div> 
+               <h5>无人遥控器</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/reveal05.png" alt="05">
+            </div>   
+               <h5>如影 RONIN-MXs</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal06.png" alt="06">
+              </div> 
+               <h5>专业微型航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal07.png" alt="07">
+              </div>
+               <h5>spell-x6m多旋翼无人机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal08.png" alt="08">
+              </div>
+               <h5>大疆dji inspire 1悟</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+
+
+<div class="exchange_box">
+      <ul class="exchange">
+         <li class="exchange_current">1</li>
+         <li>2...</li>
+         <li class="exchange_bg">go</li>
+         <div class="clearfix"></div>
+      </ul>
+      
+</div>
+
+<div class="video_box">
+      <div class="video">
+            <div class="video_full">
+                 <img src="image/video01.png" alt="01">
+                 <div class="video">
+                       <p>购买渠道<br>
+                          查找距离你最近的DJI经销商</p>
+                 </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video02.png" alt="02">
+                  <div class="video">
+                       <p>精彩视频<br>
+                          与大疆分享视频</p>
+                  </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video03.png" alt="03">
+                  <div class="video">
+                       <p>精彩活动<br>
+                          承载精彩，发现不凡</p>
+                  </div>
+            </div>           
+            <div class="clearfix"></div>
+      </div>
+</div>
+<div class="footer_container">
+     <div class="footer_centre">
+          <dl class="footer_case">
+              <dt>关于大疆</dt>
+              <dd>关于我们</dd>
+              <dd>精彩活动</dd>
+              <dd>大疆公益</dd>
+              <dd>招募精英</dd>
+              <dd>大疆传媒</dd>
+              <dd>联系我们</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>新闻中心</dt>
+              <dd>新闻</dd>
+              <dd>媒体报道</dd>
+              <dd>DJI 故事</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>购买渠道</dt>
+              <dd>大疆官方商城</dd>
+              <dd>大疆创新旗舰店</dd>
+              <dd>手机APP查找门店</dd>
+              <dd>查找DJI体验店</dd>
+              <dd>天猫官方旗舰店</dd>
+              <dd>成为授权经销商</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>开发者</dt>
+              <dd>开发者论坛</dd>
+              <dd>开发者 Github</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>社区</dt>
+              <dd>天空之城</dd>
+              <dd>大疆社区</dd>
+              <dd>精彩视频</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>教育</dt>
+              <dd>安全飞行指导</dd>
+          </dl>
+          <div class="clearfix"></div>
+     </div>
+   <div class="footer_nav_box">
+     <div class="footer_nav">
+          <img src="image/logo01.png" alt="01">      
+     </div>
+     <div class="footer_nav">
+          <p>
+              网站问题反馈点击这里<br>
+              Copyright ? 2016 DJI 大疆创新 版权所有 隐私政策 使用条款 网站地图<br>
+              粤ICP备15057791号-1
+          </p>          
+     </div>
+     <div class="footer_nav">
+          <img src="image/picture01.png" alt="01" class="footer_nav_img"> 
+          <img src="image/picture02.png" alt="02" class="footer_nav_img"> 
+          <img src="image/picture03.png" alt="03" class="footer_nav_img"> 
+          <img src="image/picture04.png" alt="04" class="footer_nav_img"> 
+          <img src="image/picture05.png" alt="05" class="footer_nav_img">
+          <div class="clearfix"></div>         
+     </div>
+     <div class="clearfix"></div> 
+   </div>
+</div>
+
+</body>
+</html>

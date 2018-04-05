@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+banner_about{ width:100%; 
+              height:320px; 
+			  margin:0 auto; 
+			  overflow:hidden;
+}
+.banner_about img{ width:100%;}
+.banner_option{ position:absolute; 
+                top:50%; 
+				left:50%; 
+				margin-top:-28px; 
+				margin-left:-400px;
+}
+.banner_option h1{ font-weight:normal; 
+                   font-size:24px; color:rgba(255,255,255,1); 
+				   padding-bottom:5px;
+}
+.banner_option h3 a{ font-size:12px; 
+                     color:rgba(255,255,255,1); 
+					 font-weight:normal; 
+					 line-height:24px;
+}
+.banner_option span{ font-size:12px; 
+                     color:rgba(255,255,255,1);
+}
+.about_container{ width:70%; 
+                  margin:0 auto; 
+				  border-top:rgba(68,168,242,0.3) 2px solid; 
+				  line-height:22px;
+}
+.aboutleft{ float:left; 
+            padding-top:80px; 
+			width:50%;
+}
+.aboutright{ float:left; 
+             padding-top:80px; 
+			 width:50%;
+}
+.aboutright p{ display:block; margin:0 auto;}
+.aboutbottom{ margin-top:2px;
+              float:left; 
+			  width:50%;
+}
+.aboutbottom h5{ font-weight:normal; 
+                 float:left;
+}
+.aboutbottom span{ float:right; 
+                   margin-top:10px;
+}
+
+/*新闻*/
+
+.product ul{      width:70%; 
+                  margin:0 auto; 
+				  line-height:22px;
+				  padding-bottom:20px; 
+		          padding-top:60px; 
+}
+.product li{
+             width:10%;
+			 margin:0 auto; 
+             position:relative; 
+			 margin-bottom:10px; 
+			 line-height:24px; 
+			 cursor:pointer; 
+			 text-align:center;
+}
+.longblock{ position:absolute; 
+            top:24px; 
+			left:50%; 
+			margin-left:-2px;
+}
+.longblock img{ display:block; 
+                margin:0 auto;
+}
+.product_bg{ background-color:#44a8f2; 
+             color:rgba(255,255,255,1);
+}
+.exchange_box{ width:16%; 
+               margin:0 auto; 
+			   margin-top:40px;
+			   cursor:pointer;
+}
+.exchange li{ float:left; 
+              width:30%; 
+ 	          text-align:center; 
+			  line-height:24px;
+}
+.exchange_current{ background-color:#44a8f2; 
+                   color:rgba(255,255,255,1);
+}
+.exchange_bg{ background-color:#44a8f2; 
+              color:rgba(255,255,255,1);
+}
+
+
+.nav_box ul{ width:70%; 
+             margin:0 auto; 
+			 padding-top:80px;
+			 border-top:rgba(68,168,242,0.3) 2px solid; 
+			 margin-bottom:38px;
+}
+.nav_box li{ float:left;}
+.nav_left{ width:40%;}
+.nav_p{ width:56%; 
+        line-height:22px; 
+        margin-top:20px;
+}
+.nav_p p{ font-size:14px;}
+.nav_right{ width:4%; 
+            margin-top:50px; 
+			cursor:pointer;
+}

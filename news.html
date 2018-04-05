@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/about.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+$(function(){
+	         /* var x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+			  $(window).resize(
+			  function(){
+		      x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+				  }
+			  )*/
+			  var x=0
+              var n=true
+             $(".menu > dl").hide()
+			 $(".menu").click(
+			 function(){
+				 if(n){
+					 $(".menu > dl").show()
+					 n=false
+					 }else{
+						  $(".menu > dl").hide()
+						  n=true
+						 }
+				 }
+			 )
+			 $(".reveal_img").mouseenter(
+			 function(){
+				 $(this).children().animate({width:290,
+				 height:260,marginLeft:-30,marginTop:-30},1000)
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(this).children().animate({width:230,
+				 height:200,marginLeft:0,marginTop:0},1000)
+				 }
+			 )
+			 
+			 $(".news_j").hide()
+			 $(".news").mouseenter(
+			 function(){
+				 x=$(this).index()
+				 $(".news_j").eq(x).slideDown()
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(".news_j").eq(x).slideUp()
+				 }
+			 )
+			 
+		$(".exchange_box li").click(
+		function(){
+			$(this).addClass("exchange_current")
+			$(this).siblings().removeClass("exchange_current")
+			}
+		)
+
+
+               
+})
+</script>
+<body>
+<!--顶部导航-->
+<div class="header_container">
+   <div class="top_container">
+     <div class="logo"><img src="image/logo.png" alt="logo"></div>
+     <div class="menu">
+          <span>菜单</span>
+          <dl>
+              <dd><a href="product.html">产品展示</a></dd>
+              <dd><a href="#">关于我们</a></dd>
+              <dd><a href="#">新闻资讯</a></dd>
+              <dd><a href="#">精彩生活</a></dd>
+              <dd><a href="#">联系我们</a></dd>
+          </dl>
+     </div>
+     <ul class="top_nav">
+         <li><a href="index.html">首页</a></li>
+         <li><a href="product.html">产品展示</a></li>
+         <li><a href="about.html">关于我们</a></li>
+         <li class="nav_current"><a href="news.html">新闻资讯</a></li>
+         <li><a href="#">精彩生活</a></li>
+         <li><a href="serve.html">联系我们</a></li>
+         <div class="clearfix"></div>
+     </ul>
+      <div class="clearfix"></div>
+   </div>
+</div>
+<!--新闻-->
+<div class="banner_container">
+     <div class="banner_about">
+           <img src="image/banner06.png" alt="06">
+     </div>
+</div>
+
+<div class="product">
+       <ul>
+          <li class="product_bg">全部
+            <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+          </li>
+      </ul>
+</div>
+
+<div class="nav_box">
+     <ul>
+         <li class="nav_left">
+              <img src="image/nav_img01.png" alt="01">
+         </li>
+         <li class="nav_p">
+              <p>
+                      &nbsp;&nbsp;&nbsp;&nbsp;（2016年5月20日 　深圳） 由全球飞行影像系统的开拓者和<br>
+                      领导者DJI大疆创新主办的天空之城360° 全景摄影大赛当日正式<br>
+                      启动。自即日起至北京时间6月20日中午12时，全球用户均可登<br>
+                      陆SkyPixel 天空之城官方网站，提交360 ° 全景航拍图片，赢取<br>
+                      大疆精灵 Phantom 4等丰厚奖品。
+              </p>
+         </li>
+         <li class="nav_right">
+                  <img src="image/nav_imgbtn.png" alt="btn">
+         </li>
+         <div class="clearfix"></div>
+     </ul>
+     
+     <ul>
+         <li class="nav_left">
+              <img src="image/nav_img02.png" alt="02">
+         </li>
+         <li class="nav_p">
+              <p>
+                      &nbsp;&nbsp;&nbsp;&nbsp;大疆战略合作总监Michael Perry说：“我们很高Facebook<br>
+                      展开合作，让全球的开发者们见证大疆无人机的优越性能。<br>
+                      Facebook在线直播功能是网络视频直播领域的一大进步，而我<br>
+                      们则证明了大疆产品可以胜任各种拍摄任务。”
+              </p>
+         </li>
+         <li class="nav_right">
+                  <img src="image/nav_imgbtn.png" alt="btn">
+         </li>
+         <div class="clearfix"></div>
+     </ul>
+     
+     <ul>
+         <li class="nav_left">
+              <img src="image/nav_img03.png" alt="03">
+         </li>
+         <li class="nav_p">
+              <p>
+                      &nbsp;&nbsp;&nbsp;&nbsp;（2016年3月25日  深圳）全球飞行影像系统的开拓者和领导<br>
+                      者DJI大疆创新当日宣布，第三届DJI开发者大赛共收到来自全球<br>
+                      的130份设计方案，再创赛事新高；25支队伍将晋级大赛第二轮<br>
+                      据介绍...
+              </p>
+         </li>
+         <li class="nav_right">
+                  <img src="image/nav_imgbtn.png" alt="btn">
+         </li>
+         <div class="clearfix"></div>
+     </ul>
+</div>
+
+
+
+
+<div class="exchange_box">
+      <ul class="exchange">
+         <li class="exchange_current">1</li>
+         <li>2...</li>
+         <li class="exchange_bg">go</li>
+         <div class="clearfix"></div>
+      </ul>
+      
+</div>
+
+<div class="video_box">
+      <div class="video">
+            <div class="video_full">
+                 <img src="image/video01.png" alt="01">
+                 <div class="video">
+                       <p>购买渠道d<br>
+                          查找距离你最近的DJI经销商</p>
+                 </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video02.png" alt="02">
+                  <div class="video">
+                       <p>精彩视频<br>
+                          与大疆分享视频</p>
+                  </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video03.png" alt="03">
+                  <div class="video">
+                       <p>精彩活动<br>
+                          承载精彩，发现不凡</p>
+                  </div>
+            </div>           
+            <div class="clearfix"></div>
+      </div>
+</div>
+<div class="footer_container">
+     <div class="footer_centre">
+          <dl class="footer_case">
+              <dt>关于大疆</dt>
+              <dd>关于我们</dd>
+              <dd>精彩活动</dd>
+              <dd>大疆公益</dd>
+              <dd>招募精英</dd>
+              <dd>大疆传媒</dd>
+              <dd>联系我们</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>新闻中心</dt>
+              <dd>新闻</dd>
+              <dd>媒体报道</dd>
+              <dd>DJI 故事</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>购买渠道</dt>
+              <dd>大疆官方商城</dd>
+              <dd>大疆创新旗舰店</dd>
+              <dd>手机APP查找门店</dd>
+              <dd>查找DJI体验店</dd>
+              <dd>天猫官方旗舰店</dd>
+              <dd>成为授权经销商</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>开发者</dt>
+              <dd>开发者论坛</dd>
+              <dd>开发者 Github</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>社区</dt>
+              <dd>天空之城</dd>
+              <dd>大疆社区</dd>
+              <dd>精彩视频</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>教育</dt>
+              <dd>安全飞行指导</dd>
+          </dl>
+          <div class="clearfix"></div>
+     </div>
+   <div class="footer_nav_box">
+     <div class="footer_nav">
+          <img src="image/logo01.png" alt="01">      
+     </div>
+     <div class="footer_nav">
+          <p>
+              网站问题反馈点击这里<br>
+              Copyright ? 2016 DJI 大疆创新 版权所有 隐私政策 使用条款 网站地图<br>
+              粤ICP备15057791号-1
+          </p>          
+     </div>
+     <div class="footer_nav">
+          <img src="image/picture01.png" alt="01" class="footer_nav_img"> 
+          <img src="image/picture02.png" alt="02" class="footer_nav_img"> 
+          <img src="image/picture03.png" alt="03" class="footer_nav_img"> 
+          <img src="image/picture04.png" alt="04" class="footer_nav_img"> 
+          <img src="image/picture05.png" alt="05" class="footer_nav_img">
+          <div class="clearfix"></div>         
+     </div>
+     <div class="clearfix"></div> 
+   </div>
+</div>
+
+</body>
+</html>

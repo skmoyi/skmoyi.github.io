@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/demo1.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/ipresenter.packed.js"></script>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<script>
+	$(document).ready(function(){
+		$('#ipresenter').iPresenter({
+			timerPadding: -1,
+			controlNav: true,
+			controlNavThumbs: true,
+			controlNavNextPrev: false
+		});
+	});
+</script>
+
+
+<script>
+$(function(){
+	         /* var x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+			  $(window).resize(
+			  function(){
+		      x=$(".banner_img").width()
+			  $(".banner_img").css("margin-left",-x/2)
+				  }
+			  )*/
+			  var x=0
+              var n=true
+             $(".menu > dl").hide()
+			 $(".menu").click(
+			 function(){
+				 if(n){
+					 $(".menu > dl").show()
+					 n=false
+					 }else{
+						  $(".menu > dl").hide()
+						  n=true
+						 }
+				 }
+			 )
+			 
+			 $(".search").css({height:0})
+	         $(".reveal_box li").mouseenter(
+		     function(){
+			x=$(this).index()
+			$(".search").eq(x).stop(false,true).animate({height:200})	
+		      }
+	         ).mouseleave(
+		    function(){
+			x=$(this).index()
+			$(".search").eq(x).stop(false,true).animate({height:0})
+		      }
+	         )
+			 
+			 
+			 $(".reveal_img").mouseenter(
+			 function(){
+				 $(this).children().stop(false,true).animate({width:290,
+				 height:260,marginLeft:-30,marginTop:-30},1000)
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(this).children().stop(false,true).animate({width:230,
+				 height:200,marginLeft:0,marginTop:0},1000)
+				 }
+			 )
+			
+			 
+			 $(".news_j").hide()
+			 $(".news").mouseenter(
+			 function(){
+				 x=$(this).index()
+				 $(".news_j").eq(x).slideDown()
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(".news_j").eq(x).slideUp()
+				 }
+			 )
+			 
+			 
+			 $(".top_nav li").click(
+			 function(){
+				 $(this).addClass("nav_current")
+				 $(this).siblings().removeClass("nav_current")
+				 }
+			 )
+			 
+			$(".banner_img").hide().first().show()
+			$(".rightbtn").click(
+			function(){
+				if(x<2){
+					x=x+1
+					}else{
+					x=0	
+						}
+			  $(".banner_img").hide().eq(x).show()
+			  clearInterval(timer)
+				}
+			).mouseleave(
+			function(){
+					timer = setInterval(run,2000)
+					}
+			)
+			$(".leftbtn").click(
+			function(){
+				if(x>0){
+					x=x-1
+					}else{
+						x=2
+						}
+				$(".banner_img").hide().eq(x).show()
+				clearInterval(timer)
+				}
+			).mouseleave(
+			function(){
+					timer = setInterval(run,2000)
+					}
+			)
+	
+			function run(){
+				if(x<2){
+					x=x+1
+					}else{
+						x=0
+						}
+					$(".banner_img").hide().eq(x).show()	
+					$(".center span").removeClass("banner_currentspan")
+			        $(".center span").eq(x).addClass("banner_currentspan")
+				}
+				 var timer = setInterval(run,2000)
+				$(".center span").hover(
+				function(){
+					x = $(".center span").index(this)
+					$(".banner_img").hide().eq(x).show()	
+					clearInterval(timer)
+					$(".center span").removeClass("banner_currentspan")
+			        $(this).addClass("banner_currentspan")
+					},function(){
+						timer = setInterval(run,2000)
+						}
+				)
+				
+     
+})
+</script>
+<body>
+<!--顶部导航-->
+<div class="header_container">
+   <div class="top_container">
+     <div class="logo"><img src="image/logo.png" alt="logo"></div>
+     <div class="menu">
+          <span>菜单</span>
+          <dl>
+              <dd><a href="product.html">产品展示</a></dd>
+              <dd><a href="about.html">关于我们</a></dd>
+              <dd><a href="news.html">新闻资讯</a></dd>
+              <dd><a href="#">精彩生活</a></dd>
+              <dd><a href="#">联系我们</a></dd>
+          </dl>
+     </div>
+     <ul class="top_nav">
+         <li class="nav_current"><a href="#">首页</a></li>
+         <li><a href="product.html">产品展示</a></li>
+         <li><a href="about.html">关于我们</a></li>
+         <li><a href="#">新闻资讯</a></li>
+         <li><a href="#">精彩生活</a></li>
+         <li><a href="serve.html">联系我们</a></li>
+         <div class="clearfix"></div>
+     </ul>
+      <div class="clearfix"></div>
+   </div>
+</div>
+<!--banner-->
+<div class="banner_container">
+
+     <div class="banner_img">
+           <img src="image/1.png" alt="1" class="banner_img_w">
+           <span class="banner_word">aaaaaaaa</span>
+           <dl class="know_word">
+                <dd><p>PHANTOM 4</p></dd>
+                <dd><h1>独聚慧眼 智所未见</h1></dd>
+           </dl>
+           <ul class="know">
+               <li><a href="#">了解更多</a></li>
+               <li class="arrow"><a href="#">观看视频</a></li>
+               <input type="button" value="立即购买">
+           </ul>
+     </div>
+     <div class="banner_img">
+           <img src="image/2.png" alt="2">
+     </div>
+     <div class="banner_img">
+           <img src="image/3.png" alt="3">
+     </div>
+
+     <img class="leftbtn" src="image/leftbtn.png" alt="leftbtn">
+     <img class="rightbtn" src="image/rightbtn.png" alt="leftbtn">
+     <div class="center">
+        <span class="banner_currentspan">aaa</span>
+        <span>aaa</span>
+        <span>aaa</span>
+        <div class="clearfix"></div>
+     </div>
+</div>
+<!--use-->
+<div class="use_box">
+     <div class="use">
+       <div class="use_left">
+         <a href="#"><img src="image/use01.png" alt="use01">
+         <p>INSPIRE1  PHANTOM 4...<br>
+            用户手册<span>v&nbsp;.20</span></p></a>
+         <div class="clearfix"></div>
+       </div>
+       <div class="use_right">
+         <img src="image/use02.png"alt="use02">
+         <p><a href="#">意外维修服务包<br>
+            拒绝高额维修费</a></p>
+         <div class="clearfix"></div>
+       </div>
+       <div class="clearfix"></div>
+     </div>
+</div>
+<!--product-->
+<div class="product">
+     <h1>最新机型</h1>
+     <p>classical case</p>
+     <span><a href="#">更多</a></span>
+     <div class="blue_fast"></div>
+</div>
+<!--产品-->
+<div>
+     <ul class="reveal_box">
+          <li class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/reveal01.png" alt="01"> 
+               </div>
+                <!--搜索-->
+                  <span class="search"></span>
+               <h5>ZENMUSE X5R无人机</h5></a>
+          </li>
+            <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal02.png" alt="02">
+              </div> 
+              <!--搜索-->
+                  <span class="search"></span>
+               <h5>大疆无人机悟 inspire</h5></a>
+          </li>
+          <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal03.png" alt="03">
+              </div> 
+              <!--搜索-->
+                  <span class="search"></span>
+               <h5>AMNKLUOK5FVH0009</h5></a>
+          </li>
+          <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal04.png" alt="04">
+              </div> 
+              <!--搜索-->
+                  <span class="search"></span>
+               <h5>无人遥控器</h5></a>
+          </li>
+
+    
+       <!--第二排-->   
+    
+          <li class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/reveal05.png" alt="05">
+            </div> 
+             <!--搜索-->
+                  <span class="search"></span>  
+               <h5>如影 RONIN-MXs</h5></a>
+          </li>
+          <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal06.png" alt="06">
+              </div> 
+               <!--搜索-->
+                  <span class="search"></span>
+               <h5>专业微型航拍相机</h5></a>
+          </li>
+          <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal07.png" alt="07">
+              </div>
+               <!--搜索-->
+                  <span class="search"></span>
+               <h5>spell-x6m多旋翼无人机</h5></a>
+          </li>
+          <li class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/reveal08.png" alt="08">
+              </div>
+               <!--搜索-->
+                  <span class="search"></span>
+               <h5>大疆dji inspire 1悟</h5></a>
+          </li>
+          <div class="clearfix"></div>
+     </ul>
+</div>
+<!--关于我们-->
+<div class="about_box">
+  <div class="about">
+      <div class="container">
+		<div id="ipresenter">
+			<div id="intro" class="step" data-x="0" data-y="0"  data-thumbnail="images/thumbnails/1.png">
+				<img src="images/aboutimg01.png" alt="aboutimg">	
+			</div>
+            <div id="intro" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="180"  data-thumbnail="images/thumbnails/2.png">
+				<img src="images/aboutimg02.png" alt="aboutimg">	
+			</div>
+        </div>
+     <div class="about_word">
+          <h1>关于我们&nbsp;&nbsp;<span>About Us</span></h1>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             首先是可在15420米（50000英尺） 以上高空飞行的<br>
+          无人驾驶航空飞行器；其次是在操作人员自然视距以外能<br>
+          够可控飞行，最大续航时间大于等于30分钟，以及在大于<br>
+          等于46.3千米/小时（25节）的阵风条件下， 具有起飞能<br>
+          力和稳定可控飞行能力的飞行器&nbsp;, 最后是最大续航时间大<br>
+          于等于1小时的飞行器。</p>
+     </div>
+     </div>
+      <div class="clearfix"></div>
+   </div>
+</div>
+<div class="machine_box">
+    <h1>新闻</h1><p>news</p>
+    <div class="blue_fast"></div>
+</div>
+<div class="news_box">
+     <div class="news_container">
+           <div class="news">
+                <h2>06 - 18</h2>
+                <span>2016</span>
+                <h3>大疆创新发布A3新固件</h3>
+                <p>A3新固件v1.3.0.0现已发布，调参软件<br>
+                版本更新至1.0.4，DJI GO AppiOS版...</p>
+             <div class="news_j">
+                <h3>大疆创新发布A3新固件</h3>
+                <p>A3新固件v1.3.0.0现已发布，调参软件<br>
+                版本更新至1.0.4，DJI GO AppiOS版...</p>
+                <h2>06 - 18
+                <a href="#">
+                  <img src="image/btn01.png" alt="01" class="news_j_btn">
+                </a>
+                <span>2016</span>
+                </h2>
+             </div>
+           </div>
+          
+        
+           <div class="news">
+                <h2>06 - 18</h2>
+                <span>2016</span>
+                <h3>大疆创新发布A3新固件</h3>
+                <p>A3新固件v1.3.0.0现已发布，调参软件<br>
+                版本更新至1.0.4，DJI GO AppiOS版...</p>
+              <div class="news_j">
+                <h3>大疆创新发布A3新固件</h3>
+                <p>A3新固件v1.3.0.0现已发布，调参软件<br>
+                版本更新至1.0.4，DJI GO AppiOS版...</p>
+                <h2>06 - 18
+                <a href="#">
+                  <img src="image/btn01.png" alt="01" class="news_j_btn">
+                </a>
+                <span>2016</span>
+                </h2>
+             </div>
+           </div>
+          
+           <div class="news">
+                <h2>08&nbsp;-&nbsp;04</h2>
+                <span>2016</span>
+                <h3>灵眸Osmo RAW固件已发布</h3>
+                <p>灵眸Osmo RAW固件V1.1.0.10现已发<br>
+                布，DJI GO App iOS版本及Android</p>
+             <div class="news_j">
+                <h3>大疆创新发布A3新固件</h3>
+                <p>A3新固件v1.3.0.0现已发布，调参软件<br>
+                版本更新至1.0.4，DJI GO AppiOS版...</p>
+                <h2>06 - 18
+                  <a href="#">
+                    <img src="image/btn01.png" alt="01" class="news_j_btn">
+                  </a>
+                <span>2016</span>
+                </h2>
+             </div>
+           </div>
+             <div class="clearfix"></div>
+     </div>
+</div>
+<div class="video_box">
+      <div class="video">
+            <div class="video_full">
+                 <img src="image/video01.png" alt="01">
+                 <div class="video">
+                       <p>购买渠道<br>
+                          查找距离你最近的DJI经销商</p>
+                 </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video02.png" alt="02">
+                  <div class="video">
+                       <p>精彩视频<br>
+                          与大疆分享视频</p>
+                  </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video03.png" alt="03">
+                  <div class="video">
+                       <p>精彩活动<br>
+                          承载精彩，发现不凡</p>
+                  </div>
+            </div>           
+            <div class="clearfix"></div>
+      </div>
+</div>
+<div class="footer_container">
+     <div class="footer_centre">
+          <dl class="footer_case">
+              <dt>关于大疆</dt>
+              <dd>关于我们</dd>
+              <dd>精彩活动</dd>
+              <dd>大疆公益</dd>
+              <dd>招募精英</dd>
+              <dd>大疆传媒</dd>
+              <dd>联系我们</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>新闻中心</dt>
+              <dd>新闻</dd>
+              <dd>媒体报道</dd>
+              <dd>DJI 故事</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>购买渠道</dt>
+              <dd>大疆官方商城</dd>
+              <dd>大疆创新旗舰店</dd>
+              <dd>手机APP查找门店</dd>
+              <dd>查找DJI体验店</dd>
+              <dd>天猫官方旗舰店</dd>
+              <dd>成为授权经销商</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>开发者</dt>
+              <dd>开发者论坛</dd>
+              <dd>开发者 Github</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>社区</dt>
+              <dd>天空之城</dd>
+              <dd>大疆社区</dd>
+              <dd>精彩视频</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>教育</dt>
+              <dd>安全飞行指导</dd>
+          </dl>
+          <div class="clearfix"></div>
+     </div>
+   <div class="footer_nav_box">
+     <div class="footer_nav">
+          <img src="image/logo01.png" alt="01">      
+     </div>
+     <div class="footer_nav">
+          <p>
+              网站问题反馈点击这里<br>
+              Copyright ? 2016 DJI 大疆创新 版权所有 隐私政策 使用条款 网站地图<br>
+              粤ICP备15057791号-1
+          </p>          
+     </div>
+     <div class="footer_nav">
+          <img src="image/picture01.png" alt="01" class="footer_nav_img"> 
+          <img src="image/picture02.png" alt="02" class="footer_nav_img"> 
+          <img src="image/picture03.png" alt="03" class="footer_nav_img"> 
+          <img src="image/picture04.png" alt="04" class="footer_nav_img"> 
+          <img src="image/picture05.png" alt="05" class="footer_nav_img">
+          <div class="clearfix"></div>         
+     </div>
+     <div class="clearfix"></div> 
+   </div>
+</div>
+</body>
+</html>

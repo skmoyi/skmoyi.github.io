@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+h5{ font-weight:normal;}
+/*product*/
+.product{ border-bottom:rgba(68,168,242,0.3) 2px solid; 
+          padding-bottom:20px; 
+		  padding-top:60px; 
+		  position:relative;
+}
+.product ul{ width:70%; 
+             margin:0 auto;
+}
+.product li{ float:left; width:10%; 
+             position:relative; 
+			 margin-bottom:10px; 
+			 line-height:24px; 
+			 cursor:pointer; 
+			 text-align:center; 
+			 padding-left:30px; 
+			 padding-right:30px;
+}
+.longblock{ position:absolute; 
+            top:24px; 
+			left:50%; 
+			margin-left:-2px;
+}
+.longblock img{ display:block; 
+                margin:0 auto;
+}
+.product_bg{ background-color:#44a8f2; 
+             color:rgba(255,255,255,1);
+}
+.exchange_box{ width:16%; 
+               margin:0 auto; 
+			   margin-top:40px;
+			   cursor:pointer;
+}
+.exchange li{ float:left; 
+              width:30%; 
+ 	          text-align:center; 
+			  line-height:24px;
+}
+.exchange_current{ background-color:#44a8f2; 
+                   color:rgba(255,255,255,1);
+}
+.exchange_bg{ background-color:#44a8f2; 
+              color:rgba(255,255,255,1);
+}

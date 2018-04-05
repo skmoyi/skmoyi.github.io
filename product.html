@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/product.css"rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+$(function(){
+			  var x=0
+              var n=true
+			 $(".reveal_img").mouseenter(
+			 function(){
+				 $(this).children().animate
+
+({width:250,
+				 height:220,marginLeft:-
+
+10,marginTop:-10},1000)
+				 }
+			 ).mouseleave(
+			 function(){
+				 $(this).children().animate
+
+({width:230,
+
+
+height:200,marginLeft:0,marginTop:0},1000)
+				 }
+			 )
+			 $(".top_nav li").click(
+			 function(){
+				 $(this).addClass("nav_current")
+				 $(this).siblings().removeClass
+
+("nav_current")
+				 }
+			 )
+		   $(".longblock").hide().first().show()
+		   $(".product li").click(
+		   function(){
+			   x=$(this).index()
+			   $(".longblock").hide().eq(x).show()
+			   }
+		   )
+	    $(".product li").click(
+		function(){
+			$(this).addClass("product_bg")
+			$(this).siblings().removeClass("product_bg")
+			}
+		)
+		$(".exchange_box li").click(
+		function(){
+			$(this).addClass("exchange_current")
+			$(this).siblings().removeClass("exchange_current")
+			}
+		)
+	   $(".reveal_container").hide().first().show()
+       $(".product li").click(
+	   function(){
+		   x=$(this).index()
+		   $(".reveal_container").hide().eq(x).show()
+		   }
+	   )
+})
+</script>
+<body>
+<!--顶部导航-->
+<div class="header_container">
+   <div class="top_container">
+     <div class="logo"><img src="image/logo.png" alt="logo"></div>
+     <div class="menu">
+          <span>菜单</span>
+          <dl>
+              <dd><a href="#">产品展示</a></dd>
+              <dd><a href="#">关于我们</a></dd>
+              <dd><a href="#">新闻资讯</a></dd>
+              <dd><a href="#">精彩生活</a></dd>
+              <dd><a href="#">联系我们</a></dd>
+          </dl>
+     </div>
+     <ul class="top_nav">
+         <li><a href="index.html">首页</a></li>
+         <li class="nav_current"><a href="#">产品展示</a></li>
+         <li><a href="about.html">关于我们</a></li>
+         <li><a href="news.html">新闻资讯</a></li>
+         <li><a href="#">精彩生活</a></li>
+         <li><a href="serve.html">联系我们</a></li>
+         <div class="clearfix"></div>
+     </ul>
+      <div class="clearfix"></div>
+   </div>
+</div>
+
+
+<!--product-->
+<div class="product">
+      <ul>
+           <li class="product_bg">全部
+            <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+            </li>
+           <li>ZENMUSEPH
+               <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+           </li>
+           <li> ANTOM 4
+              <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+           </li>
+           <li>RONIN-MX
+                <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+           </li>
+           <li>ZENMUSE
+                <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+           </li>
+           <li>PHANTOM 4
+                <span class="longblock">
+              <img src="image/product_long.png" alt="long">
+              <img src="image/product_block.png" alt="block">
+             </span>
+           </li>
+           <div class="clearfix"></div>
+      </ul>
+</div>
+<!--产品-->
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/product05.png" alt="05">
+            </div>
+               <h5>INSPIRE 1 PRO</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product06.png" alt="06">
+              </div>
+               <h5>INSPIRE 1 PRO / RAW</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product07.png" alt="07">
+              </div>
+               <h5>禅思 X5 系列航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product08.png" alt="08">
+              </div>
+               <h5>Zenmuse X5R</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+<!--产品1-->
+
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img>
+            </div>
+               <h5></h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img>
+              </div>
+               <h5></h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img>
+              </div>
+               <h5>相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img>
+              </div>
+               <h5></h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+<!--产品2-->
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/product05.png" alt="05">
+            </div>
+               <h5>INSPIRE 1 PRO</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product06.png" alt="06">
+              </div>
+               <h5>INSPIRE 1 PRO / RAW</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product07.png" alt="07">
+              </div>
+               <h5>禅思 X5 系列航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product08.png" alt="08">
+              </div>
+               <h5>Zenmuse X5R</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+<!--产品3-->
+
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/product05.png" alt="05">
+            </div>
+               <h5>INSPIRE 1 PRO</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product06.png" alt="06">
+              </div>
+               <h5>INSPIRE 1 PRO / RAW</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product07.png" alt="07">
+              </div>
+               <h5>禅思 X5 系列航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product08.png" alt="08">
+              </div>
+               <h5>Zenmuse X5R</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+
+<!--产品4-->
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/product05.png" alt="05">
+            </div>
+               <h5>INSPIRE 1 PRO</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product06.png" alt="06">
+              </div>
+               <h5>INSPIRE 1 PRO / RAW</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product07.png" alt="07">
+              </div>
+               <h5>禅思 X5 系列航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product08.png" alt="08">
+              </div>
+               <h5>Zenmuse X5R</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+<!--产品5-->
+
+<div class="reveal_container">
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+               <div class="reveal_img">
+                   <img src="image/product01.png" alt="01">
+               </div>
+               <h5>PHANTOM 3 PROFESSIONAL</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product02.png" alt="02">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+        <div class="reveal_media">
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product03.png" alt="03">
+              </div>
+               <h5>PHANTOM 3 ADVANCED</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product04.png" alt="04">
+              </div>
+               <h5>PHANTOM 3 4K</h5></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+          <div class="clearfix"></div>
+     </div>
+     <div class="reveal_box">
+          <div class="reveal"><a href="#">
+            <div class="reveal_img">
+               <img src="image/product05.png" alt="05">
+            </div>
+               <h5>INSPIRE 1 PRO</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product06.png" alt="06">
+              </div>
+               <h5>INSPIRE 1 PRO / RAW</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product07.png" alt="07">
+              </div>
+               <h5>禅思 X5 系列航拍相机</h5></a>
+          </div>
+            <div class="reveal"><a href="#">
+              <div class="reveal_img">
+               <img src="image/product08.png" alt="08">
+              </div>
+               <h5>Zenmuse X5R</h5></a>
+          </div>
+          <div class="clearfix"></div>
+     </div>
+</div>
+<div class="exchange_box">
+      <ul class="exchange">
+         <li class="exchange_current">1</li>
+         <li>2...</li>
+         <li class="exchange_bg">go</li>
+         <div class="clearfix"></div>
+      </ul>
+
+</div>
+
+
+
+
+<div class="video_box">
+      <div class="video">
+            <div class="video_full">
+                 <img src="image/video01.png" alt="01">
+                 <div class="video">
+                       <p>购买渠道<br>
+                          查找距离你最近的DJI经销商</p>
+                 </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video02.png" alt="02">
+                  <div class="video">
+                       <p>精彩视频<br>
+                          与大疆分享视频</p>
+                  </div>
+            </div>
+            <div class="video_full">
+                  <img src="image/video03.png" alt="03">
+                  <div class="video">
+                       <p>精彩活动<br>
+                          承载精彩，发现不凡</p>
+                  </div>
+            </div>
+            <div class="clearfix"></div>
+      </div>
+</div>
+<div class="footer_container">
+     <div class="footer_centre">
+          <dl class="footer_case">
+              <dt>关于大疆</dt>
+              <dd>关于我们</dd>
+              <dd>精彩活动</dd>
+              <dd>大疆公益</dd>
+              <dd>招募精英</dd>
+              <dd>大疆传媒</dd>
+              <dd>联系我们</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>新闻中心</dt>
+              <dd>新闻</dd>
+              <dd>媒体报道</dd>
+              <dd>DJI 故事</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>购买渠道</dt>
+              <dd>大疆官方商城</dd>
+              <dd>大疆创新旗舰店</dd>
+              <dd>手机APP查找门店</dd>
+              <dd>查找DJI体验店</dd>
+              <dd>天猫官方旗舰店</dd>
+              <dd>成为授权经销商</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>开发者</dt>
+              <dd>开发者论坛</dd>
+              <dd>开发者 Github</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>社区</dt>
+              <dd>天空之城</dd>
+              <dd>大疆社区</dd>
+              <dd>精彩视频</dd>
+          </dl>
+          <dl class="footer_case">
+              <dt>教育</dt>
+              <dd>安全飞行指导</dd>
+          </dl>
+          <div class="clearfix"></div>
+     </div>
+   <div class="footer_nav_box">
+     <div class="footer_nav">
+          <img src="image/logo01.png" alt="01">
+     </div>
+     <div class="footer_nav">
+          <p>
+              网站问题反馈点击这里<br>
+              Copyright ? 2016 DJI 大疆创新 版权所有 隐私政策 使用条款 网站地图
+
+<br>
+              粤ICP备15057791号-1
+          </p>
+     </div>
+     <div class="footer_nav">
+          <img src="image/picture01.png" alt="01" class="footer_nav_img">
+          <img src="image/picture02.png" alt="02" class="footer_nav_img">
+          <img src="image/picture03.png" alt="03" class="footer_nav_img">
+          <img src="image/picture04.png" alt="04" class="footer_nav_img">
+          <img src="image/picture05.png" alt="05" class="footer_nav_img">
+          <div class="clearfix"></div>
+     </div>
+     <div class="clearfix"></div>
+   </div>
+</div>
+
+</body>
+</html>
